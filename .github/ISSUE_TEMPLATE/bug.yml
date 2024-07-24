@@ -1,0 +1,40 @@
+name: バグレポート
+description: バグレポートを添付してください。
+title: "バグ: "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        バグレポートを提出していただき、ありがとうございます。
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: 何が起きましたか?
+      description: 直前の動作も含めてください。
+    validations:
+      required: true
+  - type: textarea
+    id: commit-hash
+    attributes:
+      label: コミットのハッシュ値
+      description: コミットハッシュの値を入力してください。これは、[設定] の下部、ブランチ名の横にあります。
+    validations:
+      required: true
+  - type: dropdown
+    id: browsers
+    attributes:
+      label: どのブラウザで発生しましたか?
+      multiple: true
+      options:
+        - Firefox
+        - Chrome
+        - Safari
+        - Microsoft Edge
+        - その他 (上にある"何が起きましたか?"のフォームに詳しく入力してください。)
+  - type: textarea
+    id: logs
+    attributes:
+      label: Relevantログの出力
+      description: 通常は書かなくても大丈夫です。
+      render: shell

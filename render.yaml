@@ -1,0 +1,9 @@
+services:
+ - name: revite-1
+   plan: free
+   type: web
+   runtime: docker
+   branch: master
+   envVars:
+    - key: REVOLT_PUBLIC_URL
+      value: https://api.revolt.chat
